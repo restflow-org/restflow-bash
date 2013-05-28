@@ -88,8 +88,6 @@ public class TestWorkflowsBash extends WorkflowTestCase {
 	public void test_HelloWorld_BashActor_PublishSubscribeDirector() throws Exception {
 		_loadAndRunWorkflow("HelloWorld", _publishSubscribeDirector());
 	//	assertEquals(_getExpectedTrace(), _runner.getTraceAsString());
-		String expected = _getExpectedStdout();
-		String actual = _runner.getStdoutRecording();
 		assertEquals(_getExpectedStdout(), _runner.getStdoutRecording());		
 	}	
 	
