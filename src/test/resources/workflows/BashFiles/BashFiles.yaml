@@ -1,7 +1,7 @@
 
 imports:
 
-  - actors:actors.yaml
+  - classpath:/common/java/actors.yaml
   - classpath:/org/restflow/bash/bashActor.yaml
   - classpath:/common/directors.yaml
 

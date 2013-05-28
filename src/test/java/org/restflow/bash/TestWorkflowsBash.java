@@ -65,7 +65,6 @@ public class TestWorkflowsBash extends WorkflowTestCase {
 		assertFileResourcesMatchExactly("scratch");
 	}	
 	public void test_BashFiles_DataDrivenDirector() throws Exception {
-		configureForBeanActor();
 		_useWorkingDirectory();
 		_loadAndRunWorkflow("BashFiles", _dataDrivenDirector());
 		assertEquals(_getExpectedTrace(), _runner.getTraceReport());		
