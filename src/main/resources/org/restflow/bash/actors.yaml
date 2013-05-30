@@ -1,6 +1,6 @@
 imports:
 
-- classpath:/org/restflow/bash/bashActor.yaml
+- classpath:/org/restflow/bash/types.yaml
 
 components:
 
