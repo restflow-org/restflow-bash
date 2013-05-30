@@ -7,7 +7,7 @@ imports:
 
 components:
 
-  - id: SubscribeWithLocalPaths
+  - id: SubscribeLocalPaths
     type: Workflow
     properties:
       director: !ref PublishSubscribeDirector

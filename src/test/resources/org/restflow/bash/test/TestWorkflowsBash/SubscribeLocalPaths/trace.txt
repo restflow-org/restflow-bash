@@ -1,0 +1,17 @@
+*** Node step counts ***
+SubscribeLocalPaths: 1
+SubscribeLocalPaths.AccessOneFile: 1
+SubscribeLocalPaths.CreateDirectoryOfFiles: 1
+SubscribeLocalPaths.CreateStringData: 1
+SubscribeLocalPaths.MixDirectoryAndFileLocalPaths: 1
+SubscribeLocalPaths.OutputDirectory: 1
+SubscribeLocalPaths.PrintOriginalFileContents: 1
+SubscribeLocalPaths.PrintRepublishedFileContents: 1
+*** Published resources ***
+/string: This is a string
+file:/directories/1/directoryOne
+file:/directories/1/directoryOne/directoryThree
+file:/directories/1/directoryOne/directoryThree/file3.txt
+file:/directories/1/directoryOne/file1.txt
+file:/directories/1/directoryOne/file2.txt
+file:/files/1/file.txt
