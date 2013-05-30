@@ -2,7 +2,7 @@
 imports:
 
   - actors:actors.yaml
-  - classpath:/org/restflow/bash/bashActor.yaml
+  - classpath:/org/restflow/bash/types.yaml
   - classpath:/org/restflow/directors.yaml
 
 components:
