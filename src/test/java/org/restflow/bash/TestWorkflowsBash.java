@@ -26,7 +26,7 @@ public class TestWorkflowsBash extends WorkflowTestCase {
 	
 	public void test_PublishDirectoryFromSubworkflow_DataDrivenDirector() throws Exception {
 		_useWorkingDirectory();
-		_loadAndRunWorkflow("PublishDirectoryFromSubworkflow", _dataDrivenDirector());
+		_loadAndRunWorkflow("PublishDirFromSub", _dataDrivenDirector());
 		assertEquals(_getExpectedTrace(), _runner.getTraceReport());
 		assertStringsEqualWhenLineEndingsNormalized(_getExpectedStdout(), _runner.getStdoutRecording());
 		assertFileResourcesMatchExactly("files");

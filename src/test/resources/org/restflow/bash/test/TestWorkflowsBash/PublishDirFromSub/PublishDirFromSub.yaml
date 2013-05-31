@@ -7,17 +7,17 @@ imports:
 
 components:
 
-  - id: PublishDirectoryFromSubworkflow
+  - id: PublishDirFromSub
     type: Workflow
     properties:
       director: !ref PublishSubscribeDirector
       nodes:
-        - !ref PublishDirectoryNode
+        - !ref PublishDirNode
         - !ref AccessOneFile
         - !ref PrintRepublishedFileContents
         - !ref PrintOriginalFileContents
 
-  - id: PublishDirectoryNode
+  - id: PublishDirNode
     type: Node
     properties:
       actor: !ref PublishDirectoryWorkflow
@@ -86,10 +86,10 @@ components:
         dir:
         f2:
       nodes:
-      - !ref CreateDirectoryOfFiles
+      - !ref CreateDirOfFiles
       - !ref OutputDirectory
         
-  - id: CreateDirectoryOfFiles
+  - id: CreateDirOfFiles
     type: BashActorNode
     properties:
       actor.usesStepDirectory: true
