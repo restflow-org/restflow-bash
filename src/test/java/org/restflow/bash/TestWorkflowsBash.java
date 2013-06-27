@@ -1,6 +1,7 @@
 package org.restflow.bash;
 
 import org.restflow.test.WorkflowTestCase;
+import org.restflow.util.TestUtilities;
 
 public class TestWorkflowsBash extends WorkflowTestCase {
 
@@ -18,7 +19,7 @@ public class TestWorkflowsBash extends WorkflowTestCase {
 		_useWorkingDirectory();
 		_loadAndRunWorkflow("SubscribeLocalPaths", _publishSubscribeDirector());
 		assertEquals(_getExpectedTrace(), _runner.getTraceReport());		
-		assertStringsEqualWhenLineEndingsNormalized(_getExpectedStdout("stdout_publish.txt"), _runner.getStdoutRecording());		
+		TestUtilities.assertStringsEqualWhenLineEndingsNormalized(_getExpectedStdout("stdout_publish.txt"), _runner.getStdoutRecording());		
 		assertFileResourcesMatchExactly("files");
 		assertFileResourcesMatchExactly("directories");
 		assertFileResourcesMatchExactly("scratch");
@@ -28,7 +29,7 @@ public class TestWorkflowsBash extends WorkflowTestCase {
 		_useWorkingDirectory();
 		_loadAndRunWorkflow("PublishDirFromSub", _dataDrivenDirector());
 		assertEquals(_getExpectedTrace(), _runner.getTraceReport());
-		assertStringsEqualWhenLineEndingsNormalized(_getExpectedStdout(), _runner.getStdoutRecording());
+		TestUtilities.assertStringsEqualWhenLineEndingsNormalized(_getExpectedStdout(), _runner.getStdoutRecording());
 		assertFileResourcesMatchExactly("files");
 		assertFileResourcesMatchExactly("sub");
 		assertFileResourcesMatchExactly("top");
@@ -39,7 +40,7 @@ public class TestWorkflowsBash extends WorkflowTestCase {
 		_useWorkingDirectory();
 		_loadAndRunWorkflow("SubscribeLocalPaths", _dataDrivenDirector());
 		assertEquals(_getExpectedTrace(), _runner.getTraceReport());		
-		assertStringsEqualWhenLineEndingsNormalized(_getExpectedStdout(), _runner.getStdoutRecording());		
+		TestUtilities.assertStringsEqualWhenLineEndingsNormalized(_getExpectedStdout(), _runner.getStdoutRecording());		
 		assertFileResourcesMatchExactly("files");
 		assertFileResourcesMatchExactly("directories");
 		assertFileResourcesMatchExactly("scratch");
@@ -48,7 +49,7 @@ public class TestWorkflowsBash extends WorkflowTestCase {
 	public void test_SubscribeWithLocalPaths_MTDataDrivenDirector() throws Exception {
 		_useWorkingDirectory();
 		_loadAndRunWorkflow("SubscribeLocalPaths", _MTDataDrivenDirector());
-		assertStringsEqualWhenLineEndingsNormalized(_getExpectedTrace(), _runner.getTraceReport());
+		TestUtilities.assertStringsEqualWhenLineEndingsNormalized(_getExpectedTrace(), _runner.getTraceReport());
 		assertFileResourcesMatchExactly("files");
 		assertFileResourcesMatchExactly("directories");
 		assertFileResourcesMatchExactly("scratch");
@@ -58,7 +59,7 @@ public class TestWorkflowsBash extends WorkflowTestCase {
 		_useWorkingDirectory();
 		_loadAndRunWorkflow("PublishDirectory", _dataDrivenDirector());
 		assertEquals(_getExpectedTrace(), _runner.getTraceReport());
-		assertStringsEqualWhenLineEndingsNormalized(_getExpectedStdout(), _runner.getStdoutRecording());		
+		TestUtilities.assertStringsEqualWhenLineEndingsNormalized(_getExpectedStdout(), _runner.getStdoutRecording());		
 		assertFileResourcesMatchExactly("files");
 		assertFileResourcesMatchExactly("directories");
 		assertFileResourcesMatchExactly("scratch");
