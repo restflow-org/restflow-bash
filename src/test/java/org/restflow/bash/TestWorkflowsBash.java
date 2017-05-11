@@ -22,7 +22,7 @@ public class TestWorkflowsBash extends WorkflowTestCase {
 		TestUtilities.assertStringsEqualWhenLineEndingsNormalized(_getExpectedStdout("stdout_publish.txt"), _runner.getStdoutRecording());		
 		assertFileResourcesMatchExactly("files");
 		assertFileResourcesMatchExactly("directories");
-		assertFileResourcesMatchExactly("scratch");
+		assertFileResourcesMatchExactly(".steps");
 	}
 	
 	public void test_PublishDirectoryFromSubworkflow_DataDrivenDirector() throws Exception {
@@ -33,7 +33,7 @@ public class TestWorkflowsBash extends WorkflowTestCase {
 		assertFileResourcesMatchExactly("files");
 		assertFileResourcesMatchExactly("sub");
 		assertFileResourcesMatchExactly("top");
-		assertFileResourcesMatchExactly("scratch");
+		assertFileResourcesMatchExactly(".steps");
 	}
 	
 	public void test_SubscribeWithLocalPaths_DataDrivenDirector() throws Exception {
@@ -43,7 +43,7 @@ public class TestWorkflowsBash extends WorkflowTestCase {
 		TestUtilities.assertStringsEqualWhenLineEndingsNormalized(_getExpectedStdout(), _runner.getStdoutRecording());		
 		assertFileResourcesMatchExactly("files");
 		assertFileResourcesMatchExactly("directories");
-		assertFileResourcesMatchExactly("scratch");
+		assertFileResourcesMatchExactly(".steps");
 	}
 	
 	public void test_SubscribeWithLocalPaths_MTDataDrivenDirector() throws Exception {
@@ -52,7 +52,7 @@ public class TestWorkflowsBash extends WorkflowTestCase {
 		TestUtilities.assertStringsEqualWhenLineEndingsNormalized(_getExpectedTrace(), _runner.getTraceReport());
 		assertFileResourcesMatchExactly("files");
 		assertFileResourcesMatchExactly("directories");
-		assertFileResourcesMatchExactly("scratch");
+		assertFileResourcesMatchExactly(".steps");
 	}
 	
 	public void test_PublishDirectory_DataDrivenDirector() throws Exception {
@@ -62,7 +62,7 @@ public class TestWorkflowsBash extends WorkflowTestCase {
 		TestUtilities.assertStringsEqualWhenLineEndingsNormalized(_getExpectedStdout(), _runner.getStdoutRecording());		
 		assertFileResourcesMatchExactly("files");
 		assertFileResourcesMatchExactly("directories");
-		assertFileResourcesMatchExactly("scratch");
+		assertFileResourcesMatchExactly(".steps");
 	}
 	
 	public void test_BashFiles_DataDrivenDirector() throws Exception {
@@ -71,6 +71,6 @@ public class TestWorkflowsBash extends WorkflowTestCase {
 		assertEquals(_getExpectedTrace(), _runner.getTraceReport());		
 		assertEquals(_getExpectedStdout(), _runner.getStdoutRecording());		
 		assertFileResourcesMatchExactly("messages");
-		assertFileResourcesMatchExactly("scratch");
+		assertFileResourcesMatchExactly(".steps");
 	}
 }
